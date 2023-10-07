@@ -17,9 +17,9 @@ import shlex
 #end if
 
 #Triangle vertices
-A = np.array([-6,-5]).reshape(-1,1)
-B = np.array([-6,1]).reshape(-1,1) 
-C = np.array([1,-5]).reshape(-1,1)
+A = np.array([1,0]).reshape(-1,1)
+B = np.array([5,4]).reshape(-1,1) 
+C = np.array([-6,0]).reshape(-1,1)
 
 #Triangle sides
 c = LA.norm(A-B)
@@ -76,7 +76,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('/sdcard/internship/Module-2/geometry/figs/Triangle')
+plt.savefig('/sdcard/Module2/geometry/figs/Triangle')
 #subprocess.run(shlex.split("termux-open ./figs/tri_sss.pdf"))
 #else
 plt.show()
