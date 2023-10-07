@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'/sdcard/internship/Module-2/geometry/codes/CoordGeo') #for path to external scripts
+sys.path.insert(0,'/sdcard/Module2/geometry/codes/CoordGeo') #for path to external scripts
 
 import numpy as np
 import numpy.linalg as LA
