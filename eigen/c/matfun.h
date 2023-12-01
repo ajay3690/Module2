@@ -470,3 +470,5 @@ a[1][2]=-a[1][2];
 return c;
 }
 //End of function for finding point of  intersection of lines 
+
+
