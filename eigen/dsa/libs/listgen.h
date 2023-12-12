@@ -26,7 +26,25 @@ avyuh *loadList(char *str,int m,int n);//load matrix from file
 avyuh *Listcol(avyuh *a, int n);//extract nth column of matrix
 sadish *colVec(avyuh *a, int n);//extract nth column of matrix
 avyuh *transposeList(avyuh *a);//transpose of a
+sadish *ListVecopy(sadish *a);//copy vector
 //End function declaration
+
+
+sadish *ListVecopy(sadish *a){
+	sadish *c= (sadish *)malloc(sizeof(sadish)), *head;
+	head = c; 
+	head->next = NULL;
+	for(sadish *tempa=a;tempa!=NULL;tempa=tempa->next){
+                c->data = tempa->data;
+		if(tempa->next!=NULL){
+			c->next = (sadish *)malloc(sizeof(sadish));
+			c->next->next=NULL;
+			c= c->next;
+		}
+	}
+	return head;
+}
+
 
 //Matrix transpose 
 avyuh *transposeList(avyuh *a){
