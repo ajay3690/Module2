@@ -1,0 +1,69 @@
+\documentclass[11pt]{book}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage[sectionbib,authoryear]{natbib}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+\section*{NCERT 12.10.5.14}
+\begin{enumerate}
+    \item If $ \text{A},\text{B},\text{C} $ are mutually perpendicular texttors of equal magnitudes,show that the  $ \text{A}+\text{B}+\text{C} $ is equally inclined to $ \text{A},\text{B} and \text{C} $.\\
+    Suppose we have the following vectors:
+    \begin{align}
+        \mathbf{v}_1 = \sbrak{3 ,-3 ,0}  \\
+        \mathbf{v}_2 = \sbrak{0, 3, 2}  \\
+        \mathbf{v}_3 = \sbrak{-5, -2, -1}
+    \end{align}
+
+\textbf{Step 1: Initialize}
+
+Set $\mathbf{u}_1 = \mathbf{v}_1$:\\
+ $\mathbf{u}_1 = [3, -3, 0] $
+
+\textbf{Step 2: Orthogonalization}
+
+For  $ \mathbf{v}_2$ :
+ \begin{align}
+     \mathbf{u}_2 = \mathbf{v}_2 - \frac{\langle \mathbf{v}_2, \mathbf{u}_1 \rangle}{\langle \mathbf{u}_1, \mathbf{u}_1 \rangle} \mathbf{u}_1 \\
+     \mathbf{u}_2=\mathbf{v}_2- \brak{\mathbf{u}_1 ^\top \mathbf{v}_2} \mathbf{u}_1\\ 
+     \mathbf{u}_2 = \mathbf{v}_2 - \brak{-\frac{3}{2}} \mathbf{u}_1 
+     \implies [1.5, 1.5, 2] 
+ \end{align}
+
+For $\mathbf{v}_3 $:
+\begin{align}
+    \mathbf{u}_3 = \mathbf{v}_3 - \frac{\langle \mathbf{v}_3, \mathbf{u}_1 \rangle}{\langle \mathbf{u}_1, \mathbf{u}_1 \rangle} \mathbf{u}_1 - \frac{\langle \mathbf{v}_3, \mathbf{u}_2 \rangle}{\langle \mathbf{u}_2, \mathbf{u}_2 \rangle} \mathbf{u}_2 \\
+    \mathbf{u}_3=\mathbf{v}_3- \brak{\mathbf{u}_2 ^\top \mathbf{v}_3} \mathbf{u}_2- \brak{\mathbf{u}_1 ^\top \mathbf{v}_3} \mathbf{u}_1\\ 
+\mathbf{u}_3 = \mathbf{v}_3 - \brak{-2.121} \mathbf{u}_1 - \brak{-4.28} \cdot \mathbf{u}_2 \\
+\implies[-1.302, -1.302, 1.93] 
+\end{align}
+
+\textbf{Step 3: Normalization}
+
+Normalize each vector:
+\begin{align}
+\mathbf{u}_1 = \frac{\mathbf{u}_1}{\mathbf{u}_1} \\
+\mathbf{u}_2 = \frac{\mathbf{u}_2}{\mathbf{u}_2} \\
+\mathbf{u}_3 = \frac{\mathbf{u}_3}{\mathbf{u}_3} 
+\end{align}
+
+The final orthonormal basis is:
+\begin{align}
+\mathbf{u}_1 = \sbrak{0.707,-0.707,0}\\
+\mathbf{u}_2 = \sbrak{0.514,0.514,0.685}\\
+\mathbf{u}_3 = \sbrak{-0.487,-0.487,-0.724}\\
+\end{align}
+\textbf{Step 4: QR Decoposition}
+
+we calculate Q by means of Gram–Schmidt process\\
+$Q$ is an orthogonal matrix 
+\begin{align*}
+    Q=\myvec{ 0.707&0.514&-0.487\\-0.707&0.514&-0.487\\0&0.685&-0.724}
+\end{align*}
+To verify it as a orthonormal matrix we have to check this property i.e,  $Q^{\top}.Q =I$
+\begin{align*}
+    \implies Q^\top Q &= \myvec{1&0&0\\0&1&0\\0&0&1}
+\end{align*}
+Hence  we can say that $\text{A}+\text{B}+\text{C} $ is equally inclined to $ \text{A},\text{B} and \text{C}$    \end{enumerate}
+\end{document}
