@@ -8,15 +8,16 @@
 \begin{document}
 \section*{NCERT 12.10.5.14}
 \begin{enumerate}
-    \item If $ \text{A},\text{B},\text{C} $ are mutually perpendicular texttors of equal magnitudes,show that the  $ \text{A}+\text{B}+\text{C} $ is equally inclined to $ \text{A},\text{B} and \text{C} $.\\
+    \item If $ \vec{A},\vec{B},\vec{C} $ are mutually perpendicular vectors of equal magnitudes,show that the  $ \vec{A}+\vec{B}+\vec{C} $ is equally inclined to $ \vec{A},\vec{B}  \text{and}  \vec{C} $.\\
     \textbf{Solution:}
     
     Suppose we have the following vectors:
-    \begin{align}
+    \begin{align*}
         \mathbf{v}_1 = \myvec{3 \\-3 \\0}  \\
         \mathbf{v}_2 = \myvec{0\\ 3\\ 2}  \\
         \mathbf{v}_3 = \myvec{-5\\-2\\ -1}
-    \end{align}
+    \end{align*}
+        
 
 \textbf{Step 1: Initialize}
 
@@ -53,11 +54,11 @@ Normalize each vector:
 \end{align}
 
 The final orthonormal basis is:
-\begin{align}
+\begin{align*}
 \mathbf{u}_1 = \myvec{0.707\\-0.707\\0}\\
 \mathbf{u}_2 = \myvec{0.514\\0.514\\0.685}\\
 \mathbf{u}_3 = \myvec{-0.487\\-0.487\\-0.724}\\
-\end{align}
+\end{align*}
 \textbf{Step 4: QR Decoposition}
 
 we calculate Q by means of Gram–Schmidt process\\
@@ -69,19 +70,19 @@ To verify it as a orthonormal matrix we have to check this property i.e,  $Q^{\t
 \begin{align*}
     \implies Q^\top Q &= \myvec{1&0&0\\0&1&0\\0&0&1}
 \end{align*}
-\textbf{Step 5: Findings angles \text{A},\text{B},\text{C} and $\text{A}+\text{B}+\text{C} $}
+\textbf{Step 5: Findings angles $\vec{A},\vec{B},\vec{C} \text{and} \vec{A}+\vec{B}+\vec{C} $}
 \begin{align}
-    \text{A}=\myvec{3 \\-3 \\0}\\
-    \text{B}=\myvec{0\\ 3\\ 2}  \\
-    \text{C}=\myvec{-5\\-2\\ -1}\\
-    \text{A}+\text{B}+\text{C}=\myvec{-2\\-2\\ 1}\\
+    \vec{A}=\myvec{3 \\-3 \\0}\\
+    \vec{B}=\myvec{0\\ 3\\ 2}  \\
+    \vec{C}=\myvec{-5\\-2\\ -1}\\
+    \vec{A}+\vec{B}+\vec{C}=\myvec{-2\\-2\\ 1}
 \end{align}
 Normalize each vector:\\
    \begin{align}
-    \norm{\text{A}}=\sqrt{9}=3\\
-    \norm{\text{B}}=\sqrt{13}\\
-     \norm{\text{C}}=\sqrt{30}\\
-     \norm{\text{A}+\text{B}+\text{C}}=\sqrt{9}=3
+    \norm{\vec{A}}=\sqrt{9}=3\\
+    \norm{\vec{B}}=\sqrt{13}\\
+     \norm{\vec{C}}=\sqrt{30}\\
+     \norm{\vec{A}+\vec{B}+\vec{C}}=\sqrt{9}=3
    \end{align}
 Finding angles:
 \begin{align}
@@ -105,5 +106,6 @@ Finding angles:
 \begin{align*}
     \therefore  \theta_1\neq\theta_2\neq\theta_3
 \end{align*}
-Hence  we can say that $\text{A}+\text{B}+\text{C} $ is not equally inclined to \text{A},\text{B} and \text{C}    \end{enumerate}
+Hence  we can say that $\vec{A}+\vec{B}+\vec{C} $ is not equally inclined to $\vec{A},\vec{B} \text{and} \vec{C}  $ 
+\end{enumerate}
 \end{document}
