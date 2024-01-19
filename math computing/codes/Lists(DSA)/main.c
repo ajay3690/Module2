@@ -9,7 +9,7 @@ int  main()
 avyuh *A,*B,*C,*D,*E,*F,*v1,*v2,*v3,*vert,*b1,*b11,*v3_a,*v3_b,*c1,*c11,*abc,*abc_t;
 avyuh *I;
 int m =3,n=1,k=3; //(mxn) matricesavyuh
-vert = loadList("Vec.dat",m,k);
+vert = loadList("Vec.dat",m,k);//load data from dat file
 printList(vert);
 v1 = Listcol(vert,0);
 v2 = Listcol(vert,1);
@@ -38,7 +38,7 @@ C= Listscale(c1,1/vn3);
 printf("\n C \n");
 printList(C);
 
-abc=VertToList(transposeList(A),transposeList(B),transposeList(C));
+abc=VertToList(transposeList(A),transposeList(B),transposeList(C));// [A B C]
 printf("\n [ A B C ] \n");
 printList(abc);
 
@@ -46,7 +46,7 @@ abc_t=transposeList(abc);
 printf("\n tranpose([ A B C ]) \n");
 printList(abc_t);
 
-I= Listmul(abc,abc_t);
+I= Listmul(abc,abc_t);// ABC*ABC.T
 printf("\n Identity matrix\n");
 printList(I);
 
@@ -60,7 +60,7 @@ printf("\nu1= %lf, u2= %lf, u3=%lf\n",u1,u2,u3);
 
 if (round(u1)==round(u2)==round(u3)){
 	avyuh *D;
-	D=Listadd(A,Listadd(B,C));
+	D=Listadd(A,Listadd(B,C));// D= A+B+C
 	printf("\n D \n ");
 	printList(D);
         double D_norm,C_norm,B_norm,A_norm;
